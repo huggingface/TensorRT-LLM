@@ -15,6 +15,7 @@
  */
 
 #include <algorithm>
+#include <cstdint>
 #include <numeric>
 #include <unordered_set>
 
