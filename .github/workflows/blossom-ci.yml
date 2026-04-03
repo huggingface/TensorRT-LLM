@@ -50,14 +50,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # v6.0.2
         with:
           repository: ${{ fromJson(needs.Authorization.outputs.args).repo }}
           ref: ${{ fromJson(needs.Authorization.outputs.args).ref }}
           lfs: 'true'
 
       - name: Run blossom action
-        uses: NVIDIA/blossom-action@main
+        uses: NVIDIA/blossom-action@57b0feee2dee1a8012787616afbbe12607aa9186  # main
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO_KEY_DATA: ${{ secrets.BLOSSOM_KEY }}
